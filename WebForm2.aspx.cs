@@ -53,19 +53,34 @@ namespace _5BTECH_A_2026
         protected void Course_btn_Click(object sender, EventArgs e)
         {
             int total = 0;
+            string course = "";
             if (c_language.Checked)
             {
+                course += "C language is selected";
                 total += 1000;
             }
             if(java_language.Checked)
             {
+                course += "Java language is selected";
                 total += 2000;
             }
             if(python.Checked)
             {
+               course += "Python language is selected";
                 total += 3000;
             }
-            Label1.Text = "Total price of course: " + total;
+            Label1.Text = "Selected courses are: " + course + "<br/> Total fees: " + total;
+
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Label2.Text = "YOUR CITY:" + ListBox1.SelectedItem;
+        }
+
+        protected void AdRotator1_AdCreated(object sender, AdCreatedEventArgs e)
+        {
+
         }
     }
 }

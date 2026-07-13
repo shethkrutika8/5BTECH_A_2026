@@ -37,7 +37,41 @@
             <asp:CheckBox ID="c_language" runat="server" Text="C#" /><br />
             <asp:CheckBox ID="java_language" runat="server" Text="JAVA" /><br />
             <asp:CheckBox ID="python" runat="server" Text="Python" /><br />
-            <asp:Button ID="Course_btn" runat="server" Text="TOTAL COURSE FEES" OnClick="Course_btn_Click" /><br />
+            <asp:Button ID="Course_btn" runat="server" Text="TOTAL COURSE FEES" OnClick="Course_btn_Click" />
+            <br />
+            <br />
+            LIST BOX<br />
+
+            <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged">
+                <asp:ListItem>Rajkot</asp:ListItem>
+                <asp:ListItem>SURAT</asp:ListItem>
+                <asp:ListItem>jamnagar</asp:ListItem>
+                <asp:ListItem>MORBI</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+            </asp:ListBox><br /><br />
+            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
+
+
+
+
+
+            <br />
+            <br />
+            ADDROTATION CONTROL<br /><br />
+
+
+            <asp:AdRotator ID="AdRotator1" runat="server" Height="200px" OnAdCreated="AdRotator1_AdCreated" Width="300px" />
+
+
+
+
+
+
+            <br />
+            <br />
+
+
 
 
 
