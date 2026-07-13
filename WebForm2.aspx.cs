@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,77 +9,79 @@ namespace _5BTECH_A_2026
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        string gender;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // AutoPostBack handle karne ke liye agar zaroorat ho to yahan logic likhein
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            Label1.Text = "selcet date is:" + Calendar1.SelectedDate.ToString("dd-MM-yy") + Calendar1.SelectedDate.DayOfWeek;
-
+            Label1.Text = "Selected date is: " + Calendar1.SelectedDate.ToString("dd-MM-yy") + " (" + Calendar1.SelectedDate.DayOfWeek + ")";
         }
 
         protected void Submit_btn_Click(object sender, EventArgs e)
         {
-
-            Label1.Text = "selected: " + gender;
-            //if (Male_btn.Checked)
-            //{
-            //    Label1.Text = "MALE";
-            //}
-            //else if (Female_btn.Checked)
-            //{
-            //    Label1.Text = "FEMALE";
-            //}
-            //else
-            //{
-            //    Label1.Text = "Please select a gender.";
-            //}
+            // Direct radio buttons ko check karna behtar approach hai PostBack issues se bachne ke liye
+            if (Male_btn.Checked)
+            {
+                Label1.Text = "Selected Gender: Male";
+            }
+            else if (Female_btn.Checked)
+            {
+                Label1.Text = "Selected Gender: Female";
+            }
+            else
+            {
+                Label1.Text = "Please select a gender.";
+            }
         }
 
         protected void Male_btn_CheckedChanged(object sender, EventArgs e)
         {
-            gender = "Male";
+            // Agar aapko instant event chalana hai toh RadioButton ki AutoPostBack="true" honi chahiye
         }
 
         protected void Female_btn_CheckedChanged(object sender, EventArgs e)
         {
-            gender = "Female";
+            // Agar aapko instant event chalana hai toh RadioButton ki AutoPostBack="true" honi chahiye
         }
 
         protected void Course_btn_Click(object sender, EventArgs e)
         {
             int total = 0;
             string course = "";
-            if (c_language.Checked)
+
+            // Aapke image checkbox ke mutabik yahan text aur name match kiya hai
+            if (c_language.Checked) // C# checklist ke mutabik agar aapne ID c_language rakhi hai
             {
-                course += "C language is selected";
+                course += "C# ";
                 total += 1000;
             }
-            if(java_language.Checked)
+            if (java_language.Checked)
             {
-                course += "Java language is selected";
+                course += "JAVA ";
                 total += 2000;
             }
-            if(python.Checked)
+            if (python.Checked)
             {
-               course += "Python language is selected";
+                course += "Python ";
                 total += 3000;
             }
-            Label1.Text = "Selected courses are: " + course + "<br/> Total fees: " + total;
 
+            Label1.Text = "Selected courses are: " + course + "<br/> Total fees: " + total;
         }
 
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label2.Text = "YOUR CITY:" + ListBox1.SelectedItem;
+            if (ListBox1.SelectedItem != null)
+            {
+                Label2.Text = "YOUR CITY: " + ListBox1.SelectedItem.Text;
+            }
         }
 
         protected void AdRotator1_AdCreated(object sender, AdCreatedEventArgs e)
         {
-
+            
         }
     }
 }

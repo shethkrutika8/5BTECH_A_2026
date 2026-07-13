@@ -1,18 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Advertisement>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Advertisements>
 	<Ad>
-		<ImageUrl>~\img\59d635e9-23f5-4716-8654-8fc6f894791b.png</ImageUrl>
+		<ImageUrl>~/img/59d635e9-23f5-4716-8654-8fc6f894791b.png</ImageUrl>
 		<NavigateUrl>https://www.google.com</NavigateUrl>
-		<AlternateText>google</AlternateText>
-		<Impression>2</Impression>
-		<Keywords></Keywords> 
-		
+		<AlternateText>Google Ad 1</AlternateText>
+		<Impressions>50</Impressions>
+		<Keyword>Tech</Keyword>
 	</Ad>
 	<Ad>
-		<ImageUrl>img\8bdba2db-2ed6-46af-85e7-2c4ce1019970.png</ImageUrl>
+		<ImageUrl>~/img/8bdba2db-2ed6-46af-85e7-2c4ce1019970.png</ImageUrl>
 		<NavigateUrl>https://www.google.com</NavigateUrl>
-		<AlternateText>google</AlternateText>
-		<Impression>2</Impression>
-		<Keywords></Keywords>
+		<AlternateText>Google Ad 2</AlternateText>
+		<Impressions>50</Impressions>
+		<Keyword>Tech</Keyword>
 	</Ad>
-</Advertisement>
+</Advertisements>

@@ -61,7 +61,7 @@
             ADDROTATION CONTROL<br /><br />
 
 
-            <asp:AdRotator ID="AdRotator1" runat="server" Height="200px" OnAdCreated="AdRotator1_AdCreated" Width="300px" />
+            <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/XMLFile1.xml" Height="200px" OnAdCreated="AdRotator1_AdCreated" Width="300px" />
 
 
 
